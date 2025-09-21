@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>🌻 21 de Septiembre 🌻</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+</head>
+<body>
+  <canvas id="petals-canvas"></canvas>
+
+  <!-- Main Content -->
+  <div id="main-screen" class="screen active">
+    <nav class="navbar">
+      <ul>
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#dedicatoria">Dedicatoria</a></li>
+        <li><a href="#contador">Cuenta regresiva</a></li>
+        <li><a href="#sorpresa">Sorpresa</a></li>
+      </ul>
+    </nav>
+
+    <!-- Secciones -->
+    <section id="inicio" class="section">
+      <h1>🌻 21 de Septiembre 🌻</h1>
+      <p>Un día especial está por llegar...</p>
+    </section>
+
+    <section id="dedicatoria" class="section">
+      <h2>✨ Dedicatoria ✨</h2>
+      <p>"Tu eres mi sol, y yo tu girasol 🌻"</p>
+    </section>
+
+    <section id="contador" class="section">
+      <h2 id="title"></h2>
+      <div id="countdown"></div>
+    </section>
+
+    <section id="sorpresa" class="section">
+      <h2>🎁 Sorpresa 🎁</h2>
+      <button onclick="revealSurprise()">Descubrir</button>
+      <p id="surprise-msg" class="hidden">💛 Siempre floreceré contigo 💛</p>
+    </section>
+  </div>
+
+  <!-- Scripts -->
+  <script src="petals.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

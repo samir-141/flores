@@ -1,0 +1,113 @@
+/* 🎨 Estilos generales */
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #ffeb99, #ffe066, #ffd93d);
+  color: #333;
+  overflow-x: hidden;
+}
+
+/* 🌻 Canvas de pétalos (siempre al fondo) */
+#petals-canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;  /* No bloquea clics */
+  z-index: -1;          /* Al fondo del contenido */
+}
+#countdown{
+    width: 100%;
+    height: 100%;
+}
+/* 🧭 Navbar flotante con efecto vidrio */
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 100; /* Siempre encima */
+  background: rgba(255, 255, 255, 0.2);
+  padding: 10px 20px;
+  backdrop-filter: blur(8px);
+  border-radius: 15px;
+  margin: 10px auto;
+  width: fit-content;
+}
+
+.navbar ul {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.navbar a:hover {
+  color: #e76f51; /* Destacar con color cálido */
+}
+
+/* 📑 Secciones */
+.section {
+  height: calc(100vh - 100px); /* resta el alto de la navbar (~80px) */
+  display: flex;
+  width: 80%;
+  margin: auto;
+  flex-direction: column;
+  justify-content: center; /* centra vertical */
+  align-items: center;     /* centra horizontal */
+  text-align: center;
+  padding: 20px;
+  opacity: 0; /* animación inicial */
+  transform: translateY(30px);
+  transition: all 1s ease;
+}
+
+
+.section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* 🎁 Sorpresa */
+.hidden {
+  display: none;
+}
+
+#surprise-msg {
+  margin-top: 20px;
+  font-size: 20px;
+  color: #e76f51;
+}
+
+/* ✨ Animación de títulos */
+h1, h2 {
+  animation: fadeInScale 2s ease forwards;
+}
+
+@keyframes fadeInScale {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+body {
+  overflow: hidden; /* ❌ Desactiva scroll */
+}
+.section {
+  display: none; /* Ocultas por defecto */
+}
+.section.active {
+  display: flex; /* Solo la activa se muestra */
+}
