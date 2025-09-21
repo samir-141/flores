@@ -10,7 +10,7 @@ function updateCountdown() {
   const now = Date.now();
   const distance = targetDate - now;
 
-  if (distance >= 0) {
+  if (distance <= 0) {
     // Mostrar sorpresa (iframe)
     title.textContent = "🌻 ¡El día llegó! 🌻";
     countdown.innerHTML = `

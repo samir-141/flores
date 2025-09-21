@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Poema</title>
+  <style>
+    :root{
+      --bg:#0f172a;
+      --card:#0b1220;
+      --accent:#ffb86b;
+      --text:#e6eef8;
+      --muted:#a9b6ca;
+      --radius:14px;
+      --max-width:720px;
+      --font-sans: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+      --font-serif: "Merriweather", Georgia, "Times New Roman", serif;
+    }
+
+    html,body{
+      height:100%;
+      margin:0;
+      font-family:var(--font-sans);
+      background: radial-gradient(1200px 600px at 10% 10%, rgba(255,184,107,0.06), transparent 10%),
+                  linear-gradient(180deg, #071028 0%, #081026 100%);
+      color:var(--text);
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+    }
+
+    .wrap{
+      min-height:100vh;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      padding:10px 5px;
+      box-sizing:border-box;
+    }
+  .poem{
+  margin-top:0px;
+  font-family:var(--font-serif);
+  font-size:1.05rem;
+  line-height:1.6;
+  color:var(--text);
+  white-space:pre-wrap;
+  letter-spacing:0.002em;
+
+  /* columnas cuando haya suficiente espacio */
+  column-count: 1;          /* por defecto, 1 columna */
+  column-gap: 40px;         /* espacio entre columnas */
+}
+
+@media (min-width: 900px){
+  .poem{
+    column-count: 2;        /* en pantallas anchas, 2 columnas */
+  }
+}
+
+@media (min-width: 1400px){
+  .poem{
+    column-count: 3;        /* en pantallas muy anchas, 3 columnas */
+  }
+}
+
+
+    .poem p {
+  break-inside: avoid;
+  -webkit-column-break-inside: avoid;
+  page-break-inside: avoid;
+}
+
+
+    
+
+    @media (max-width:520px){
+      article.card{ padding:20px; }
+      .poem{ font-size:1rem; }
+      .poem{
+    column-count: 1;        /* en pantallas muy anchas, 3 columnas */
+  }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+      <section class="poem">
+        <p>Quiero recorrer tu piel sin prisa,
+como quien aprende un idioma secreto,
+leyendo con mis labios
+cada sílaba de tu cuerpo.</p>
+
+        <p>Tus pechos —dos lunas tibias—
+me llaman como faros en la noche,
+y en su centro arde la rosa
+donde mi lengua quiere dormir.</p>
+
+        <p>Bajo tu ombligo comienza el abismo,
+un jardín oscuro y húmedo
+que me reclama con la urgencia
+de un río desbordado.
+Allí quisiera perderme,
+beber de tu centro como del vino más antiguo,
+y dejar que tu gemido sea mi plegaria.</p>
+
+        <p>Tus muslos se cierran como puertas de fuego,
+y yo insisto, me rindo, regreso,
+porque en esa frontera
+late el misterio que me desarma.</p>
+
+        <p>Quiero hundirme en ti
+hasta que desaparezcan las palabras,
+hasta que tu sudor y el mío
+sean la misma lluvia,
+y tu cuerpo entero se convierta
+en mi única patria.</p>
+      </section>
+
+  </div>
+</body>
+</html>
