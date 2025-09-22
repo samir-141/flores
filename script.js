@@ -16,7 +16,7 @@ function updateCountdown() {
     countdown.innerHTML = `
       <iframe src="floresamarillas.html" 
               id="contenido" 
-              style="width:100%; height:90vh; border:none;">
+              style="width:100%; height:80vh; border:none;">
       </iframe>`;
     clearInterval(timer); // detenemos el interval
     return;
